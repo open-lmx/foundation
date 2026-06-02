@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Module",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Module"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "lessons": {"type": "array", "items": {"type": "string"}},
+    "teaches": {"type": "array", "items": {"type": "string"}},
+    "assesses": {"type": "array", "items": {"type": "string"}},
+    "estimated_duration": {"type": "string"},
+    "sequence": {"type": "integer"}
+  }
+}
