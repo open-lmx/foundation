@@ -1,0 +1,54 @@
+{
+  "id": "did:lmx:agent:research-assistant",
+  "type": "Agent",
+  "name": "Research Assistant Agent",
+  "description": "An agent that performs evidence-grounded research and produces cited summaries.",
+  "version": "0.1.0",
+  "status": "draft",
+  "owner": "open-lmx",
+  "publisher": "open-lmx",
+  "maintainer": "open-lmx",
+  "created_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-02T00:00:00Z",
+  "lifecycle": {
+    "state": "draft",
+    "since": "2026-06-02T00:00:00Z",
+    "reason": "Initial example asset."
+  },
+  "trust": {
+    "trust_score": 0,
+    "quality_score": 0,
+    "risk_score": 0.5,
+    "evidence": []
+  },
+  "policy": {
+    "required_policies": [
+      "citation-required",
+      "source-verification-required",
+      "human-approval-for-high-risk-output"
+    ],
+    "permissions": [
+      "read:web",
+      "read:documents",
+      "write:summary"
+    ]
+  },
+  "relationships": [
+    {
+      "id": "rel-agent-uses-web-search",
+      "source": "did:lmx:agent:research-assistant",
+      "target": "did:lmx:tool:web-search",
+      "type": "USES",
+      "created_at": "2026-06-02T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "schema_version": "0.1.0",
+    "maturity": "draft"
+  },
+  "tags": [
+    "agent",
+    "research",
+    "governed-ai"
+  ]
+}
