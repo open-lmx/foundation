@@ -1,0 +1,14 @@
+{
+  "id": "did:lmx:workflow:research-pipeline",
+  "type": "Workflow",
+  "name": "Research Pipeline",
+  "version": "0.1.0",
+  "status": "draft",
+  "owner": "open-lmx",
+  "created_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-02T00:00:00Z",
+  "lifecycle": {"state":"draft","since":"2026-06-02T00:00:00Z"},
+  "metadata": {
+    "steps":["search","evaluate","summarize"]
+  }
+}
