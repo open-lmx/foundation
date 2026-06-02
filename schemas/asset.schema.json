@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/asset.schema.json",
+  "title": "Open-LMX Asset",
+  "description": "Base schema for any governed Open-LMX asset.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "version",
+    "status",
+    "owner",
+    "created_at",
+    "updated_at",
+    "lifecycle"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier for the asset."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Human",
+        "Agent",
+        "Organization",
+        "Team",
+        "Role",
+        "Skill",
+        "Knowledge",
+        "Tool",
+        "Model",
+        "Dataset",
+        "Memory",
+        "Prompt",
+        "Workflow",
+        "Task",
+        "Decision",
+        "Policy",
+        "Rule",
+        "Control",
+        "Objective",
+        "Constraint",
+        "Service",
+        "Application",
+        "Environment",
+        "Infrastructure",
+        "Artifact",
+        "Document",
+        "CreativeWork"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "active",
+        "deprecated",
+        "archived",
+        "retired"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "maintainer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["state", "since"],
+      "properties": {
+        "state": {
+          "type": "string"
+        },
+        "since": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "trust": {
+      "type": "object",
+      "properties": {
+        "trust_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quality_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "required_policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "./relationship.schema.json"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
