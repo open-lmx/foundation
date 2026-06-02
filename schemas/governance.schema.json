@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/governance.schema.json",
+  "title": "Open-LMX Governance",
+  "type": "object",
+  "required": ["id","name","level","status"],
+  "properties": {
+    "id": {"type":"string"},
+    "name": {"type":"string"},
+    "level": {
+      "type":"string",
+      "enum":[
+        "law",
+        "safety",
+        "mission",
+        "principle",
+        "policy",
+        "standard",
+        "control",
+        "objective",
+        "task",
+        "action"
+      ]
+    },
+    "status": {
+      "type":"string",
+      "enum":["draft","approved","active","deprecated","retired"]
+    },
+    "description": {"type":"string"},
+    "owner": {"type":"string"},
+    "effective_from": {"type":"string","format":"date-time"},
+    "effective_until": {"type":"string","format":"date-time"},
+    "references": {
+      "type":"array",
+      "items":{"type":"string"}
+    }
+  }
+}
