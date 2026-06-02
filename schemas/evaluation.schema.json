@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/evaluation.schema.json",
+  "title": "Open-LMX Evaluation",
+  "type": "object",
+  "required": ["id","asset_id","scope","method","metrics","timestamp"],
+  "properties": {
+    "id": {"type":"string"},
+    "asset_id": {"type":"string"},
+    "scope": {"type":"string"},
+    "method": {"type":"string"},
+    "inputs": {"type":"object"},
+    "outputs": {"type":"object"},
+    "metrics": {"type":"object"},
+    "evidence": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "reviewer": {"type":"string"},
+    "timestamp": {"type":"string","format":"date-time"},
+    "metadata": {"type":"object"}
+  }
+}
