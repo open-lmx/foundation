@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Lesson",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Lesson"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "teaches": {"type": "array", "items": {"type": "string"}},
+    "requires": {"type": "array", "items": {"type": "string"}},
+    "resources": {"type": "array", "items": {"type": "string"}},
+    "learning_objectives": {"type": "array", "items": {"type": "string"}}
+  }
+}
