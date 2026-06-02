@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/policy.schema.json",
+  "title": "Open-LMX Policy",
+  "type": "object",
+  "required": ["id","name","version","status"],
+  "properties": {
+    "id": {"type":"string"},
+    "name": {"type":"string"},
+    "description": {"type":"string"},
+    "version": {"type":"string"},
+    "status": {
+      "type":"string",
+      "enum":["draft","approved","active","deprecated","retired"]
+    },
+    "scope": {"type":"string"},
+    "controls": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "obligations": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "exceptions": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "effective_from": {"type":"string","format":"date-time"},
+    "effective_until": {"type":"string","format":"date-time"}
+  }
+}
