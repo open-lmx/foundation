@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/lifecycle.schema.json",
+  "title": "Open-LMX Lifecycle",
+  "type": "object",
+  "required": ["state","since"],
+  "properties": {
+    "state": {
+      "type":"string",
+      "enum":[
+        "draft",
+        "review",
+        "approved",
+        "active",
+        "deprecated",
+        "archived",
+        "retired"
+      ]
+    },
+    "previous_state": {"type":"string"},
+    "since": {"type":"string","format":"date-time"},
+    "reason": {"type":"string"},
+    "actor": {"type":"string"},
+    "evidence": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "approved": {"type":"boolean"}
+  }
+}
