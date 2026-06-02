@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Assessment",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Assessment"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "evaluates": {"type": "array", "items": {"type": "string"}},
+    "questions": {"type": "array", "items": {"type": "string"}},
+    "rubrics": {"type": "array", "items": {"type": "string"}},
+    "passing_score": {"type": "number"}
+  }
+}
