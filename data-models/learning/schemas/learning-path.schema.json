@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Learning Path",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "LearningPath"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "courses": {"type": "array", "items": {"type": "string"}},
+    "required_competencies": {"type": "array", "items": {"type": "string"}},
+    "target_competencies": {"type": "array", "items": {"type": "string"}},
+    "awarded_credentials": {"type": "array", "items": {"type": "string"}}
+  }
+}
