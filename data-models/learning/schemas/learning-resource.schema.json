@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/data-models/learning/schemas/learning-resource.schema.json",
+  "title": "Open-LMX Learning Resource",
+  "description": "A schema.org-aligned learning resource modeled as a governed Open-LMX asset.",
+  "type": "object",
+  "required": ["id", "type", "name", "version", "status", "schema_org_type", "teaches"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "LearningResource"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"type": "string", "enum": ["draft", "review", "approved", "active", "deprecated", "archived", "retired"]},
+    "schema_org_type": {"const": "LearningResource"},
+    "schema_org_url": {"const": "https://schema.org/LearningResource"},
+    "learning_resource_type": {"type": "string"},
+    "educational_use": {"type": "array", "items": {"type": "string"}},
+    "educational_level": {"type": "string"},
+    "interactivity_type": {"type": "string"},
+    "teaches": {"type": "array", "items": {"type": "string"}},
+    "assesses": {"type": "array", "items": {"type": "string"}},
+    "competency_required": {"type": "array", "items": {"type": "string"}},
+    "educational_alignment": {"type": "array", "items": {"type": "string"}},
+    "author": {"type": "string"},
+    "publisher": {"type": "string"},
+    "provider": {"type": "string"},
+    "license": {"type": "string"},
+    "in_language": {"type": "string"},
+    "accessibility_feature": {"type": "array", "items": {"type": "string"}},
+    "metadata": {"type": "object"}
+  }
+}
