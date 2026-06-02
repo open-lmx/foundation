@@ -1,0 +1,18 @@
+{
+  "id": "did:lmx:skill:summarization",
+  "type": "Skill",
+  "name": "Summarization Skill",
+  "version": "0.1.0",
+  "status": "active",
+  "owner": "open-lmx",
+  "created_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-02T00:00:00Z",
+  "lifecycle": {
+    "state": "active",
+    "since": "2026-06-02T00:00:00Z"
+  },
+  "metadata": {
+    "capability": "summarization",
+    "evaluation_required": true
+  }
+}
