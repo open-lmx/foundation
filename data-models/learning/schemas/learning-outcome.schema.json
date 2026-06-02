@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Learning Outcome",
+  "type": "object",
+  "required": ["id", "type", "statement"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "LearningOutcome"},
+    "statement": {"type": "string"},
+    "aligned_objectives": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "achievement_level": {"type": "string"}
+  }
+}
