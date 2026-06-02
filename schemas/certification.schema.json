@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/certification.schema.json",
+  "title": "Open-LMX Certification",
+  "type": "object",
+  "required": ["id","asset_id","level","issued_at","issuer"],
+  "properties": {
+    "id": {"type":"string"},
+    "asset_id": {"type":"string"},
+    "level": {
+      "type":"string",
+      "enum":[
+        "self_attested",
+        "community_verified",
+        "foundation_verified",
+        "independent_verified"
+      ]
+    },
+    "issuer": {"type":"string"},
+    "issued_at": {"type":"string","format":"date-time"},
+    "expires_at": {"type":"string","format":"date-time"},
+    "evidence": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "evaluation_refs": {
+      "type":"array",
+      "items":{"type":"string"}
+    },
+    "metadata": {"type":"object"}
+  }
+}
