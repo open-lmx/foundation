@@ -1,0 +1,18 @@
+{
+  "id": "did:lmx:model:example-llm",
+  "type": "Model",
+  "name": "Example LLM",
+  "version": "1.0.0",
+  "status": "active",
+  "owner": "open-lmx",
+  "created_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-02T00:00:00Z",
+  "lifecycle": {
+    "state": "active",
+    "since": "2026-06-02T00:00:00Z"
+  },
+  "metadata": {
+    "provider": "example",
+    "capabilities": ["reasoning","generation","summarization"]
+  }
+}
