@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/trust.schema.json",
+  "title": "Open-LMX Trust",
+  "description": "Schema for representing evidence-based trust signals for assets.",
+  "type": "object",
+  "required": ["asset_id", "trust_score", "risk_score", "evidence", "updated_at"],
+  "properties": {
+    "asset_id": {"type": "string"},
+    "context": {"type": "string"},
+    "trust_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "reliability_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "security_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "compliance_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "risk_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "reviewer": {"type": "string"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "metadata": {"type": "object"}
+  }
+}
