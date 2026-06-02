@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-lmx.org/schemas/relationship.schema.json",
+  "title": "Open-LMX Relationship",
+  "type": "object",
+  "required": ["id","source","target","type","created_at"],
+  "properties": {
+    "id": {"type":"string"},
+    "source": {"type":"string"},
+    "target": {"type":"string"},
+    "type": {
+      "type":"string",
+      "enum":[
+        "USES",
+        "OWNS",
+        "CREATED_BY",
+        "APPROVED_BY",
+        "DEPENDS_ON",
+        "GOVERNS",
+        "IMPLEMENTS",
+        "CERTIFIED_BY",
+        "DEPLOYED_TO",
+        "REPORTS_TO",
+        "MEMBER_OF",
+        "EVALUATED_BY",
+        "TRUSTED_BY",
+        "REPLACES",
+        "DERIVED_FROM"
+      ]
+    },
+    "created_at": {"type":"string","format":"date-time"},
+    "valid_from": {"type":"string","format":"date-time"},
+    "valid_until": {"type":"string","format":"date-time"},
+    "metadata": {"type":"object"}
+  }
+}
