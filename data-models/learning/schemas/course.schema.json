@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Course",
+  "type": "object",
+  "required": ["id","type","name","teaches"],
+  "properties": {
+    "id": {"type":"string"},
+    "type": {"const":"Course"},
+    "name": {"type":"string"},
+    "description": {"type":"string"},
+    "modules": {"type":"array","items":{"type":"string"}},
+    "teaches": {"type":"array","items":{"type":"string"}},
+    "assesses": {"type":"array","items":{"type":"string"}},
+    "awards": {"type":"array","items":{"type":"string"}},
+    "prerequisites": {"type":"array","items":{"type":"string"}},
+    "estimated_duration": {"type":"string"},
+    "educational_level": {"type":"string"}
+  }
+}
