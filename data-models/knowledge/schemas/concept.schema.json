@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Concept",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Concept"},
+    "name": {"type": "string"},
+    "definition": {"type": "string"},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "related_concepts": {"type": "array", "items": {"type": "string"}},
+    "prerequisite_concepts": {"type": "array", "items": {"type": "string"}},
+    "references": {"type": "array", "items": {"type": "string"}}
+  }
+}
