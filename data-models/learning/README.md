@@ -1,56 +1,65 @@
 # Open-LMX Learning Data Models
 
-This directory defines Open-LMX learning data models aligned with schema.org education and learning concepts.
+The Learning domain defines how knowledge is structured into teachable, consumable, and measurable learning experiences.
+
+It is the supply mechanism that transforms knowledge into structured capability-building pathways.
+
+---
 
 ## Purpose
 
-Learning artifacts should be governed assets. They must be identifiable, versioned, related, assessable, and auditable.
+Learning models describe:
 
-## Schema.org Alignment
+- how knowledge is organized
+- how it is delivered
+- how it is consumed
+- how it is structured into measurable outcomes
 
-Primary schema.org concepts:
+---
 
-- CreativeWork
+## Core Learning Entities
+
 - LearningResource
+- LearningObjective
+- LearningOutcome
 - Course
-- CourseInstance
-- EducationalOccupationalCredential
-- EducationalOccupationalProgram
-- EducationEvent
-- AlignmentObject
-- DefinedTerm
-
-## Open-LMX Learning Model Families
-
-- Learning Resource
-- Course
-- Course Instance
 - Module
 - Lesson
-- Topic
-- Concept
-- Competency
-- Learning Objective
-- Learning Outcome
-- Assessment
-- Question
-- Rubric
-- Assignment
+- Curriculum
+- Program
+- LearningPath
 - Exercise
+- Assignment
 - Lab
 - Project
-- Curriculum
-- Learning Path
-- Program
-- Credential
-- Certificate
-- Learner Profile
-- Instructor Profile
-- Enrollment
-- Completion Record
-- Learning Record
 
-## Core Graph
+---
+
+## Learning Graph
+
+This is the canonical learning structure in Open-LMX.
+
+```text
+Knowledge
+  ↓
+Concepts
+  ↓
+Learning Objectives
+  ↓
+Learning Resources
+  ↓
+Lessons
+  ↓
+Modules
+  ↓
+Courses
+  ↓
+Programs
+```
+
+---
+
+## Full Learning-to-Competency Flow
 
 ```text
 Program
@@ -79,3 +88,57 @@ Credential
   issued_to LearnerProfile
   issued_by Organization
 ```
+
+---
+
+## Learning Lifecycle
+
+### 1. Knowledge Structuring
+
+Raw knowledge is decomposed into concepts, principles, and frameworks.
+
+### 2. Curriculum Design
+
+Knowledge is structured into objectives, lessons, modules, and courses.
+
+### 3. Delivery
+
+Learning is delivered via lessons, labs, assignments, and projects.
+
+### 4. Outcome Mapping
+
+Each learning unit maps to measurable outcomes and competencies.
+
+---
+
+## Connection to Assessment Domain
+
+Learning is validated through assessment:
+
+```text
+Learning Outcome
+  ↓
+Assessment
+  ↓
+Evidence
+  ↓
+Competency
+```
+
+---
+
+## Connection to Capability Domain
+
+```text
+Learning
+  ↓
+Competency
+  ↓
+Capability
+```
+
+---
+
+## Core Principle
+
+Learning is a structured transformation from knowledge to capability, not isolated content consumption.
