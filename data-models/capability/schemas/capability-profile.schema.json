@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Capability Profile",
+  "type": "object",
+  "required": ["id", "type", "person_id"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "CapabilityProfile"},
+    "person_id": {"type": "string"},
+    "capabilities": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "overall_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "verified_capabilities": {"type": "array", "items": {"type": "string"}},
+    "emerging_capabilities": {"type": "array", "items": {"type": "string"}},
+    "last_updated": {"type": "string", "format": "date-time"},
+    "source_of_truth": {"type": "string"}
+  }
+}
