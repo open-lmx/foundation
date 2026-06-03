@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Term",
+  "type": "object",
+  "required": ["id", "type", "label"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Term"},
+    "label": {"type": "string"},
+    "definition": {"type": "string"},
+    "concept": {"type": "string"},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "language": {"type": "string"},
+    "domain": {"type": "string"},
+    "references": {"type": "array", "items": {"type": "string"}}
+  }
+}
