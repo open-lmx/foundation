@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Capability Requirement",
+  "type": "object",
+  "required": ["id", "type", "capability", "required_level"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "CapabilityRequirement"},
+    "capability": {"type": "string"},
+    "required_level": {"type": "string"},
+    "context": {"type": "string"},
+    "mandatory": {"type": "boolean"},
+    "evidence_required": {"type": "array", "items": {"type": "string"}},
+    "assessment_required": {"type": "boolean"},
+    "role_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}
