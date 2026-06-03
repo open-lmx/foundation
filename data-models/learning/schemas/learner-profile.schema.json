@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Learner Profile",
+  "type": "object",
+  "required": ["id", "type"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "LearnerProfile"},
+    "competencies": {"type": "array", "items": {"type": "string"}},
+    "credentials": {"type": "array", "items": {"type": "string"}},
+    "enrollments": {"type": "array", "items": {"type": "string"}},
+    "learning_records": {"type": "array", "items": {"type": "string"}},
+    "trust_score": {"type": "number"}
+  }
+}
