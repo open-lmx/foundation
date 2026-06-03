@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open-LMX Capability",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"const": "Capability"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "competencies": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "credentials": {"type": "array", "items": {"type": "string"}},
+    "contexts": {"type": "array", "items": {"type": "string"}},
+    "proficiency_level": {"type": "string"},
+    "confidence_score": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}
